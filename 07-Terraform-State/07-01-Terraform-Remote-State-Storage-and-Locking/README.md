@@ -1,5 +1,10 @@
 # Terraform Remote State Storage & Locking
-
+##SELF NOTE:
+1)By storing the state file in remote we can give aacess to all developers to perform opearations, if you store it in local we can'target
+2)for this we need a remote backen storage, in AWS s3 act as a remote backend
+3)here we have two types backed ends *)enchanced backedns(means can to both storage and performing the operations ie.local and remote) (eg for remote backends:terraform cloud,terraform enterprise)
+**)standard backends(means to can do only stor the sate and it will relay on the local backends to perform opetions----(eg: aws s3,azure rm,etcd,...)
+4)to resolve conflict operation like multiple developers doing operations at a time we have to use state lock using dynamo db
 ## Step-01: Introduction
 - Understand Terraform Backends
 - Understand about Remote State Storage and its advantages
