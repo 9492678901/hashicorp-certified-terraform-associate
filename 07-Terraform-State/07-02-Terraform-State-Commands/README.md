@@ -1,5 +1,23 @@
 # Terraform State Commands
 
+##SELF NOTE:
+1)terraform show: it will show state file which is in the remote.
+terraform plan -out=tfplan
+ii)tarrform show command used to read tfplan files, which are in binary formate show command converts into human redable formate.
+2)terraform refrsh: updates the local state file with cloud resources
+3)terraform state list:**  This command is used to list resources within a Terraform state.
+4)terraform  state show resource name:** This command is used to show the attributes of a single resource in the Terraform state.
+5)terraform  state mv old_resource name new_resource name: this used to rename the resource name then it will reflect in remote state file. make changes in your manifest file then only use apply command.
+6)terraform state rm resource_name: this comand used to remove the resource from tf state, after running this command remote state file get updated, then use terraform apply command it will create new resource.old resource will become non terraform managed resource.
+7)terraform state replace-provider old provider_name new provider_name:
+terraform disaster recovery command:
+8)terraform state pull: used to pull the state file form remote in raw formate
+9)terraform state push:used to push the state file form locak to remote
+10)terraform force-unlock Lock_ID: used to unlock the remote state file not local statefiles
+11)terraform taint resource_name:used to destroy/recreate the resource by using taint(eg:if we want o change user data on ec2 machine at that time have to remove old instance and create new one with uodated user data.
+12)terraform untaint resource_name: used to untaint the resource
+13)terraform apply -target=resource_name: not recomanded to use will get confusion
+
 ## Step-01: Introduction
 - Terraform Commands
   - terraform show
