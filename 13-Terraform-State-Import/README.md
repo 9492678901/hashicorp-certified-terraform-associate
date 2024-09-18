@@ -1,5 +1,10 @@
 # Terraform State Import
 
+##SELF NOTE:
+1)after import command we can get new changes which was not done through terraform after that weneed to make the manifeswt file then apply to maintain the same configuration on desired sate and actual state
+2)it is nothing but we are getting the state file of actual state and making manifest accordint to that
+3)after mention the all chnages in manifest file only we need to run terraform apply if nor those change will be removed by the terrorm.
+
 ## Step-01: Introduction
 ### Some notes about Terraform Import Command
 - Terraform is able to import existing infrastructure. 
